@@ -60,11 +60,10 @@
 </div>
 <!-- End vertical navbar -->
 
-
 <!-- Page content holder -->
 <div class="page-content p-5" id="content">
  <!-- <app-song></app-song>-->
-<app-lista-canciones></app-lista-canciones>
-<app-music-control></app-music-control>
+<app-lista-canciones (eventSong)="onSelect($event)"></app-lista-canciones>
+<app-music-control [song]="selectedSong"></app-music-control>
 
 </div>

@@ -6,7 +6,7 @@ export interface Song {
   artist: string;
   album: string;
   year: number;
-
   time: string;
   imagen: string;
+  url: string;
 }

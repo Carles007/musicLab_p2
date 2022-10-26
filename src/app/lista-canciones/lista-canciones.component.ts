@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Song } from '../song';
 import { SONGS } from '../mock-songs';
 
@@ -9,8 +9,12 @@ import { SONGS } from '../mock-songs';
 })
 export class ListaCancionesComponent implements OnInit {
 
+  @Output() eventSong = new EventEmitter<Song>();
+
   songs = SONGS;
   selectedSong?: Song;
+
+  player = new Audio;
 
   constructor() { }
  
@@ -18,8 +22,10 @@ export class ListaCancionesComponent implements OnInit {
   ngOnInit(): void {
 
   }
+
   onSelect(song: Song): void {
     this.selectedSong = song;
+    this.eventSong.emit(song);
   }
 
 
