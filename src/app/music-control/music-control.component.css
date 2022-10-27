@@ -5,4 +5,11 @@ i {
     padding-left: 15px;
   }
 
+  .barraReproductor {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    height: 60px;
+
+  }
  

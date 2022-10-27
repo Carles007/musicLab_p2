@@ -10,6 +10,10 @@
             <p>{{ secondsToString(audio.currentTime) }}<progress [value]="audio.currentTime" [max]="audio.duration" ></progress> - {{ secondsToString(audio.duration) }}</p>
 
     </div>
+
+    <section class="barraReproductor"  >
+        <mat-progress-bar style="height:10px; margin: 5% 5%" background="blue" height=3 mode="determinate" value={{progress}}></mat-progress-bar>
+    </section>
 </div>
 
 

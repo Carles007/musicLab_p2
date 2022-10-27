@@ -7,6 +7,7 @@ import { SongDetailComponent } from './song-detail/song-detail.component';
 import { ListaCancionesComponent } from './lista-canciones/lista-canciones.component';
 import { MusicControlComponent } from './music-control/music-control.component';
 import { ProgressbarComponent } from './progressbar/progressbar.component';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 
 
 @NgModule({
@@ -20,8 +21,8 @@ import { ProgressbarComponent } from './progressbar/progressbar.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
-
+    FormsModule,
+    MatProgressBarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

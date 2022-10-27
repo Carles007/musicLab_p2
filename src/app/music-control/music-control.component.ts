@@ -10,6 +10,7 @@ export class MusicControlComponent implements OnInit {
   audio = new Audio();
 
   constructor() { }
+  progress = 0;  
 
   ngOnInit(): void {
   }
@@ -22,6 +23,9 @@ export class MusicControlComponent implements OnInit {
   playSound() {
 
     this.audio.play();
+
+      this.updateProgress();
+    
   }
   pauseSound() {
 
@@ -32,6 +36,19 @@ export class MusicControlComponent implements OnInit {
     this.audio.pause();
     this.audio.currentTime = 0;
   }
+
+  updateProgress(){
+
+  
+    this.progress = (this.audio.currentTime/this.audio.duration*100 || 0) 
+    setTimeout(() =>{
+      this.updateProgress();
+    },1000)
+    
+
+    console.log("Progreso:"+this.progress);
+  }
+
 
   secondsToString (seconds: number): string {
     if (isNaN(seconds)) seconds = 0;
