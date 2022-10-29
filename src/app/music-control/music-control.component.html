@@ -12,8 +12,10 @@
     <i class="bi bi-stop-circle" (click)="stopSound()" style="font-size: 70px; color:rgb(0, 0, 139)"></i>
     <i class="bi bi-skip-end-circle" (click)="nextSound()" style="font-size: 70px; color:rgb(0, 0, 139)"></i>
 
+    <h4>
     <p>{{ secondsToString(audio.duration - audio.currentTime) }}<progress [value]="progress"
         [max]="audio.duration"></progress> {{ secondsToString(audio.duration) }} </p>
-
+        <i class="bi bi-volume-up"></i>  
     <input type="range" min="0" max="1" [(ngModel)]="audio.volume" step="0.1" id="mislider"> <span id="valor"></span>
+    </h4>
 </div>
